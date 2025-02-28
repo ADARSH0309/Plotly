@@ -1,10 +1,11 @@
 import streamlit as st
-
-
-
-
 import plotly.graph_objects as go
 import numpy as np
+
+st.set_page_config(layout="wide")
+st.title('Streamlit Plotly Example')
+
+
 X, Y, Z = np.mgrid[-8:8:40j, -8:8:40j, -8:8:40j]
 values = np.sin(X*Y*Z) / (X*Y*Z)
 
