@@ -29,12 +29,17 @@ print(df.head())
 
 # Create a bar chart
 
-fig2 = px.bar(df, x='Region', y='CO2_Reduction', title='CO2 Reduction by Region')
-st.plotly_chart(fig2, use_container_width=True)
+col2, col3 = st.columns(2)
+
+with col2:
+
+    fig2 = px.bar(df, x='Region', y='CO2_Reduction', title='CO2 Reduction by Region')
+    st.plotly_chart(fig2, use_container_width=True)
 
 # Create a scatter plot
-fig3 = px.scatter(df, x='Sales', y='Customer_Satisfaction', title='Sales and Customer Satisfaction')
-st.plotly_chart(fig3, use_container_width=True)
+with col3:
+    fig3 = px.scatter(df, x='Sales', y='Customer_Satisfaction', title='Sales and Customer Satisfaction')
+    st.plotly_chart(fig3, use_container_width=True)
 
 
 st.title("Sales and CO2 Reduction by Region and Product")
