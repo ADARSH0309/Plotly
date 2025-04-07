@@ -26,6 +26,11 @@ print(df.shape)
 print(df.head())
 
 
+# Set the page layout to full width
+st.set_page_config(layout="wide")
+
+# Your app content here...
+
 
 # Create a bar chart
 
